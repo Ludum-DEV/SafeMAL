@@ -1,0 +1,1 @@
+All The Malware Scripts In Here Have A EULA. Which means, I take no responsibility for any damage caused to your/someone else's computer. This Is A Non-Disguised Malware Which Means You Know Exatly What You Are Installing.
