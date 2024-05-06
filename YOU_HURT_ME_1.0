@@ -1,0 +1,50 @@
+// ==UserScript==
+// @name           YOU HURT ME
+// @namespace      https://www.example.com
+// @version        1.0
+// @description    The Official YOU HURT ME Virus!
+// @author         Ludum
+// @match          *://*/*
+// @icon           data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💔</text></svg>
+// @grant          none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Display EULA
+    var eulaAgreement = confirm("Warning! This Malware Is No Joke! By continuing you automatically agree that the creator has no responsibility for any damage caused to any computer this virus touches. Do you agree?");
+
+    if (eulaAgreement) {
+        // Activate virus
+        document.addEventListener('mousemove', function() {
+            var win = window.open("", "_blank", "width=200,height=200");
+            win.document.body.style.backgroundColor = "black";
+            win.document.body.style.color = "red";
+            win.document.body.style.textAlign = "center";
+            win.document.body.innerHTML = "<h1 style='font-size: 40px; margin-top: 30px;'>YOU HURT ME</h1>";
+            animateWindow(win);
+        });
+    } else {
+        alert("You did not agree to the EULA. The virus will not be activated.");
+    }
+
+    function animateWindow(win) {
+        var posX = Math.random() * (window.innerWidth - 200);
+        var posY = Math.random() * (window.innerHeight - 200);
+        var deltaX = (Math.random() - 0.5) * 20;
+        var deltaY = (Math.random() - 0.5) * 20;
+
+        var intervalId = setInterval(function() {
+            posX += deltaX;
+            posY += deltaY;
+
+            win.moveTo(posX, posY);
+
+            if (posX < 0 || posX > window.innerWidth - 200 || posY < 0 || posY > window.innerHeight - 200) {
+                clearInterval(intervalId);
+                win.close();
+            }
+        }, 50);
+    }
+})();
