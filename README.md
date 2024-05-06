@@ -1,1 +1,1 @@
-All The Malware Scripts In Here Have A EULA. Which means, I take no responsibility for any damage caused to your/someone else's computer. This Is A Non-Disguised Malware Which Means You Know Exactly What You Are Installing.
+All The Malware Scripts In Here Have A EULA. Which means, I take no responsibility for any damage caused to your/someone else's computer. This Is A Non-Disguised Malware Which Means You Know Exactly What You Are Installing. To Install Them, Use An Extension Such As Tampermonkey. I Condone The Use Of These To Happen In A VM (Virtual Machine).
